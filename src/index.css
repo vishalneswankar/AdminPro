@@ -1,0 +1,243 @@
+body {
+  background-color: #f4f7fe;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.app-container {
+  background-color: #f4f7fe !important;
+}
+
+.sidebar {
+  min-height: calc(100vh - 64px);
+  background: #ffffff;
+  box-shadow: 4px 0 24px rgba(0,0,0,0.02);
+  z-index: 1030;
+}
+
+.topbar-glass {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.gradient-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.nav-link-custom {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.nav-link-custom:hover {
+  transform: translateX(4px);
+  background: rgba(0,0,0,0.02);
+}
+
+.nav-link-custom.active {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);
+}
+
+.nav-link-custom.active i {
+  color: white !important;
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+/* Recharts tooltip override */
+.recharts-default-tooltip {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Dark Mode Overrides */
+[data-bs-theme="dark"] body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .app-container {
+  background-color: #121212 !important;
+}
+
+[data-bs-theme="dark"] .sidebar {
+  background: #1e1e1e !important;
+  box-shadow: 4px 0 24px rgba(0,0,0,0.2);
+}
+
+[data-bs-theme="dark"] .topbar-glass {
+  background: rgba(30, 30, 30, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .glass-card {
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .bg-white {
+  background-color: #1e1e1e !important;
+}
+
+[data-bs-theme="dark"] .bg-light {
+  background-color: #2a2a2a !important;
+}
+
+[data-bs-theme="dark"] .text-dark {
+  color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+  color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .border-bottom {
+  border-bottom-color: #333 !important;
+}
+
+[data-bs-theme="dark"] .table {
+  color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .table-light {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+  color: #e0e0e0;
+  background-color: rgba(255,255,255,0.05);
+}
+
+[data-bs-theme="dark"] .btn-light {
+  background-color: #333;
+  border-color: #333;
+  color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .btn-light:hover {
+  background-color: #444;
+  border-color: #444;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .recharts-default-tooltip {
+  background: rgba(30, 30, 30, 0.95) !important;
+  color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] .modal-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+[data-bs-theme="dark"] .modal-header {
+  border-bottom-color: #333;
+}
+
+[data-bs-theme="dark"] .modal-footer {
+  border-top-color: #333;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #0dcaf0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Agency Dark Theme for Header and Sidebar */
+.agency-header-sidebar {
+  background-color: #18181b !important; /* Dark gray/black shade */
+  color: #ffffff !important;
+}
+
+.agency-header-sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.agency-header-sidebar .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.agency-header-sidebar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.agency-header-sidebar .sidebar-heading {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.agency-submenu {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.agency-submenu .nav-link {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.agency-submenu .nav-link:hover {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.agency-submenu .nav-link.active {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+/* Fix dark mode overrides for the new sidebar/header */
+[data-bs-theme="dark"] .agency-header-sidebar {
+  background-color: #09090b !important; /* Pure black/darker shade for dark mode */
+}
+
